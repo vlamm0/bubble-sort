@@ -14,12 +14,10 @@ def bubble_sort(arr)
         swapped,arr[i-1],arr[i] = swap(arr[i-1],arr[i])
       end
     end
-    if swapped == false then break end #flag to exit loop when no switching occurs (sorted)
+    swapped ? next : break #flag to exit loop when no switching occurs (sorted)
   end
   return arr
 end
-
-
 
 # main
 p bubble_sort([4,3,78,2,0,2])
